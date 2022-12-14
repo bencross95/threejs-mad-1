@@ -79,17 +79,17 @@ renderCalls.push(function(){
 /* ////////////////////////////////////////////////////////////////////////// */
 
 
-var light = new THREE.PointLight( 0xffffcc, 2, 200 );
+var light = new THREE.PointLight( 0xffffcc, 2, 50 );
 light.position.set( 4, 30, -20 );
 scene.add( light );
 
-var light2 = new THREE.AmbientLight( 0x20202A, 10, 100 );
+var light2 = new THREE.AmbientLight( 0x20202A, 2, 10 );
 light2.position.set( 30, -10, 30 );
 scene.add( light2 );
 
-var light3 = new THREE.PointLight( 0xFFFFFF, 2, 100 );
-light2.position.set( 100, -300, 500 );
-scene.add( light3 );
+var light3 = new THREE.PointLight( 0xFFFFFF, 30, 30 );
+light3.position.set( 0, -300, 0 );
+// scene.add( light3 );
 
 /* ////////////////////////////////////////////////////////////////////////// */
 
@@ -97,7 +97,7 @@ var material1 = new THREE.MeshLambertMaterial({color: 0xFFCC00})
 
 var loader = new THREE.GLTFLoader();
 loader.crossOrigin = true;
-loader.load( 'models/madlogo1_2.16.gltf', function ( data ) {
+loader.load( 'models/madlogo1_2.18.gltf', function ( data ) {
 
   
     var object = data.scene;
